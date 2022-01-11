@@ -1,0 +1,57 @@
+.dsmovie-pagination-container {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dsmovie-pagination-box {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dsmovie-pagination-box form {
+  width: 100%;
+  display: flex;
+}
+
+.dsmovie-pagination-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+}
+
+.dsmovie-pagination-button svg {
+  filter: brightness(0) saturate(100%) invert(26%) sepia(19%) saturate(7395%)
+    hue-rotate(234deg) brightness(89%) contrast(92%); /* quando o botão estiver com disabled = {false} o filtro com essas características é aplicado ao svg(arrow image) e, assim, muda a cor da arrow de cinza para roxo */
+}
+
+.dsmovie-pagination-button:disabled {
+  border: 1px solid #c2c2c2;
+  cursor: unset;
+  /*quando o botão estiver com disabled = {true} a borda muda para a cor cinza e o cursor não fica pointer */
+}
+
+.dsmovie-pagination-button:disabled svg {
+  filter: none;
+  /*quando o botão estiver com disabled = {true} nenhum filtro é aplicado ao svg(arrow image), dessa forma, ela fica padrão como baixamos, ou seja, cinza */
+}
+
+.dsmovie-pagination-container p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-primary);
+}
+
+.dsmovie-flip-horizontal {
+  transform: rotate(180deg);
+  /* roda a arrow do botão da direita 180 graus, fazendo com que ela fique para a direita (180 graus da imagem original baixada, que fica apontando para a esquerda) */
+}

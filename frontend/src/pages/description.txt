@@ -1,0 +1,1 @@
+A pasta pages será utilizada para correspondência de rotas, ou sejam, as rotas que nosso site vai seguir para trocar a página.

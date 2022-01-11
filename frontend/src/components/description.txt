@@ -1,0 +1,9 @@
+A pasta pages é utilizada para criação e separação de pequenos fragmentos de tela, ou seja, para partes que serão mostradas na tela, como o card que tem o filme e permite a avaliação e a listagem dos filmes.
+Note que o header, como será utilizado em toda página não está nas pages. 
+
+RESUMINDO: componentes que são apenas fragmentos de telas que vão entrar em outras telas.
+
+
+
+
+
