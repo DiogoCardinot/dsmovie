@@ -1,9 +1,13 @@
 package com.devsuperior.dsmovie.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 //Tipo sempre começa com letra maiúscula
@@ -19,6 +23,11 @@ public class Movie {
 	private Double score;
 	private Integer count;
 	private String image;
+	
+	@OneToMany(mappedBy="id.movie") //no score o atributo é id e no scorepk o atributo é movie, por isso id.movie
+	//um filme pode ter várias avaliações (Um para muitos)
+	private Set<Score> scores = new HashSet<>();
+	//referência para o conjunto de avaliações desse filme, por isso está na entidade movie
 	
 	
 	public Movie() {
@@ -63,6 +72,12 @@ public class Movie {
 	public void setImage(String image) {
 		this.image = image;
 	}
+	//metodo de acesso a coleção de scores de um determinado filme
+	public Set<Score> getScores() {
+		return scores;
+	}
+	
+	
 	
 	
 
