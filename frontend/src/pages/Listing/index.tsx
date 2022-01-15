@@ -29,9 +29,12 @@ function Listing() {
   }, [pageNumber]);
   //Deixando o segundo argumento do useEffect vazio ele só roda a função quando carregar a página
 
+  const handlePageChange = (newPageNumber: number) => {
+    setPageNumber(newPageNumber);
+  };
   return (
     <>
-      <Pagination />
+      <Pagination page={page} onChange={handlePageChange} />
 
       <div className="container">
         {/* Essa classe container é do bootstrap, ela tem estilização própria e nos ajuda*/}
